@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin 
+    xmlns="http://www.phonegap.com/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    id="com.phonegap.plugins.fileopener" 
+    version="0.0.3">
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>  
+
+    <name>File Opener</name>
+
+    <js-module src="www/fileopener.js" name="FileOpener">
+        <clobbers target="window.plugins.fileOpener" />
+    </js-module>
+
+	<!-- iOS -->
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="FileOpener2">
+				<param name="ios-package" value="FileOpener2" />
+			</feature>
+		</config-file>
+		<source-file src="src/ios/FileOpener2.m" />
+		<header-file src="src/ios/FileOpener2.h" />
+	</platform>
+	
+	<!-- Android -->	
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FileOpener">
+                <param name="android-package" value="com.phonegap.plugins.fileopener.FileOpener"/>            
+            </feature>
+        
+        </config-file>
+        <source-file src="src/android/FileOpener.java" target-dir="src/com/phonegap/plugins/fileopener" />
+    </platform>
+	
+	<!-- Windows Phone 8 -->
+    <platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="FileOpener">
+                <param name="wp-package" value="FileOpener"/>
+            </feature>
+        </config-file>
+        <source-file src="src/wp/FileOpener.cs" />
+    </platform>
+</plugin>
