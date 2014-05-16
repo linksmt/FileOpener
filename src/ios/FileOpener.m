@@ -7,7 +7,7 @@
 @implementation FileOpener
 @synthesize controller = docController;
 
-- (void) open: (CDVInvokedUrlCommand*)command {
+- (void) openFile: (CDVInvokedUrlCommand*)command {
 
     NSString *path = [command.arguments objectAtIndex:0];
     //NSString *uti = [command.arguments objectAtIndex:1];

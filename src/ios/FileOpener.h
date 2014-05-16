@@ -6,6 +6,6 @@
 
 @property(nonatomic, strong) UIDocumentInteractionController *controller;
 
-- (void) open: (CDVInvokedUrlCommand*)command;
+- (void) openFile: (CDVInvokedUrlCommand*)command;
 
 @end
