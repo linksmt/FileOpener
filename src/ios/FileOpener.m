@@ -1,4 +1,4 @@
-#import "FileOpener2.h"
+#import "FileOpener.h"
 #import <Cordova/CDV.h>
 
 #import <QuartzCore/QuartzCore.h>
