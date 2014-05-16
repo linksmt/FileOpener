@@ -4,7 +4,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 
-@implementation FileOpener2
+@implementation FileOpener
 @synthesize controller = docController;
 
 - (void) open: (CDVInvokedUrlCommand*)command {
